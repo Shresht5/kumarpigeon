@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kumar Pigeon - Premium Pigeon Products</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .pigeon-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .carousel-container {
+            perspective: 1000px;
+        }
+
+        .carousel-slide {
+            transition: transform 0.7s ease-in-out;
+        }
+
+        .carousel-indicator {
+            transition: all 0.3s ease;
+        }
+
+        .carousel-indicator.active {
+            transform: scale(1.2);
+        }
+
+        .fade-in {
+            animation: fadeIn 0.7s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0.5;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        nav {
+
+            transition: transform 0.3s ease;
+
+        }
+
+        .hide {
+            transform: translateY(-100%);
+        }
+
+        @keyframes apear {
+            from {
+                opacity: 0;
+                scale: 0.5;
+            }
+
+            to {
+                opacity: 1;
+                scale: 1;
+            }
+        }
+
+        .View {
+            z-index: 40;
+            animation: apear 1s linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40%;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-200">
+    <!-- Navigation -->
+    <nav id="menu" class="bg-white w-full shadow-lg fixed top-0 z-100 ">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center py-2">
+                <div class="flex items-center space-x-4">
+                    <div class="flex items-center">
+                        <img src="logo.png" display="block" alt="Description" width="40" height="40">
+                        <span style="font-family: Gabriola, cursive;"
+                            class="m-[8px] font-bold text-3xl text-blue-700">Kumar
+                            Pigeon</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-blue-600 font-medium hover:text-blue-800">Home</a>
+                    <a href="#products" class="text-gray-600 hover:text-blue-600">Products</a>
+                    <a href="#services" class="text-gray-600 hover:text-blue-600">Services</a>
+                    <a href="#about" class="text-gray-600 hover:text-blue-600">About</a>
+                    <a href="#contact" class="text-gray-600 hover:text-blue-600">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button class="mobile-menu-button p-2 focus:outline-none">
+                        <i class="fas fa-bars text-gray-600 text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div class="mobile-menu hidden md:hidden bg-white pb-4 px-4">
+            <a href="#home" class="block py-2 text-gray-600 hover:text-blue-600">Home</a>
+            <a href="#products" class="block py-2 text-gray-600 hover:text-blue-600">Products</a>
+            <a href="#services" class="block py-2 text-gray-600 hover:text-blue-600">Services</a>
+            <a href="#about" class="block py-2 text-gray-600 hover:text-blue-600">About</a>
+            <a href="#contact" class="block py-2 text-gray-600 hover:text-blue-600">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero min-h-screen flex items-end justify-center text-white">
+        <div class=" w-full">
+
+            <div class="carousel-container relative overflow-hidden shadow-2xl">
+                <!-- Carousel Slides -->
+                <div class="relative h-[calc(100vh-68px)]">
+                    <!-- Slide 1 -->
+                    <div class="carousel-slide absolute inset-0 w-full h-full flex items-center justify-center fade-in">
+                        <img src="1.jpg" alt="Nature 1" class="w-full h-full object-cover">
+                        <div class="absolute bottom-[10vh] left-0  text- text-yellow-800 p-6">
+                            <h2 class="text-2xl font-bold">Beautiful Nature</h2>
+                            <p class="">Experience the wonders of the natural world</p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div
+                        class="carousel-slide absolute inset-0 w-full h-full flex items-center justify-center opacity-0">
+                        <img src="2.jpg" alt="City 1" class="w-full h-full object-cover">
+                        <div class="absolute bottom-[10vh] left-0  text-center text-yellow-800 p-6">
+                            <h2 class="text-2xl font-bold text-white">Urban Landscape</h2>
+                            <p class="text-gray-200">The vibrant life of modern cities</p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div
+                        class="carousel-slide absolute inset-0 w-full h-full flex items-center justify-center opacity-0">
+                        <img src="3.jpg" alt="Technology 1" class="w-full h-full object-cover">
+                        <div class="absolute bottom-[10vh] left-0  text-center text-blue-500 p-6">
+                            <h2 class="text-2xl font-bold text-white">Modern Technology</h2>
+                            <p class="text-gray-200">Innovations shaping our future</p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 4 -->
+                    <div
+                        class="carousel-slide absolute inset-0 w-full h-full flex items-center justify-center opacity-0">
+                        <img src="4.jpg" alt="Food 1" class="w-full h-full object-cover">
+                        <div class="absolute bottom-[10vh] left-0  text-center text-blue-500 p-6">
+                            <h2 class="text-2xl font-bold text-white">Delicious Cuisine</h2>
+                            <p class="text-gray-200">A culinary journey around the world</p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 5 -->
+                    <div
+                        class="carousel-slide absolute inset-0 w-full h-full flex items-center justify-center opacity-0">
+                        <img src="5.jpg" alt="Animals 1" class="w-full h-full object-cover">
+                        <div class="absolute bottom-[10vh] left-0  text-center text-blue-800 p-6">
+                            <h2 class="text-2xl font-bold ">Wildlife Wonders</h2>
+                            <p class="text-gray-800">Discover the beauty of Earth's creatures</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Arrows -->
+                <button
+                    class="carousel-prev absolute left-4 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/50 text-white p-2 rounded-full shadow-md transition-all duration-300 z-10">
+                    <i class="fas fa-chevron-left text-xl"></i>
+                </button>
+                <button
+                    class="carousel-next absolute right-4 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/50 text-white p-2 rounded-full shadow-md transition-all duration-300 z-10">
+                    <i class="fas fa-chevron-right text-xl"></i>
+                </button>
+
+                <!-- Indicators -->
+                <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2 z-10">
+                    <button class="carousel-indicator w-3 h-3 rounded-full bg-white/80 hover:bg-white active"
+                        data-index="0"></button>
+                    <button class="carousel-indicator w-3 h-3 rounded-full bg-white/80 hover:bg-white"
+                        data-index="1"></button>
+                    <button class="carousel-indicator w-3 h-3 rounded-full bg-white/80 hover:bg-white"
+                        data-index="2"></button>
+                    <button class="carousel-indicator w-3 h-3 rounded-full bg-white/80 hover:bg-white"
+                        data-index="3"></button>
+                    <button class="carousel-indicator w-3 h-3 rounded-full bg-white/80 hover:bg-white"
+                        data-index="4"></button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class=" py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Why Choose Kumar Pigeon?</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">We provide the highest quality products for pigeon
+                    enthusiasts and breeders.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="View bg-blue-600 text-white p-8 rounded-xl text-center">
+                    <div class="bg-blue-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-ring text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Custom Rings</h3>
+                    <p class="text-gray-300">Personalized identification rings with your preferred design, text, and
+                        colors.</p>
+                </div>
+                <div class="View bg-green-600 text-white p-8 rounded-xl text-center">
+                    <div class="bg-green-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-utensils text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Premium Food</h3>
+                    <p class="text-gray-300">Nutritionally balanced food blends for optimal pigeon health and
+                        performance.</p>
+                </div>
+                <div class="View bg-purple-600 text-white p-8 rounded-xl text-center">
+                    <div class="bg-purple-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-paint-brush text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Wing Paints</h3>
+                    <p class="text-gray-300">Safe, vibrant paints specially formulated for pigeon wings and feathers.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class=" py-16 bg-gray-50">
+        <div class="container bg-gray-50 mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Products</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">High-quality products designed for pigeon enthusiasts and
+                    professionals.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <div class="View product-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300">
+                    <div class="h-48 bg-blue-100 flex items-center justify-center">
+                        <i class="fas fa-ring text-blue-500 text-7xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Custom Pigeon Rings</h3>
+                        <p class="text-gray-600 mb-4">Personalized aluminum or plastic rings with your choice of text,
+                            numbers, and colors.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-blue-600">From ₹99</span>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">Order
+                                Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="View product-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300">
+                    <div class="h-48 bg-green-100 flex items-center justify-center">
+                        <i class="fas fa-utensils text-green-500 text-7xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Premium Pigeon Food</h3>
+                        <p class="text-gray-600 mb-4">Nutritionally balanced food blends for racing, breeding, and show
+                            pigeons.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-blue-600">From ₹299/kg</span>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">Order
+                                Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="View product-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300">
+                    <div class="h-48 bg-purple-100 flex items-center justify-center">
+                        <i class="fas fa-paint-brush text-purple-500 text-7xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Wing Paints</h3>
+                        <p class="text-gray-600 mb-4">Safe, non-toxic paints for decorating pigeon wings in vibrant
+                            colors.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-blue-600">From ₹199</span>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">Order
+                                Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="View product-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300">
+                    <div class="h-48 bg-yellow-100 flex items-center justify-center">
+                        <i class="fas fa-pills text-yellow-500 text-7xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Pigeon Medicine</h3>
+                        <p class="text-gray-600 mb-4">Essential healthcare products for common pigeon ailments and
+                            prevention.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-blue-600">From ₹149</span>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">Order
+                                Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="View product-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300">
+                    <div class="h-48 bg-red-100 flex items-center justify-center">
+                        <i class="fas fa-tint text-red-500 text-7xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Liquid Supplements</h3>
+                        <p class="text-gray-600 mb-4">Vitamin and mineral supplements to enhance pigeon health and
+                            performance.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-blue-600">From ₹249</span>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">Order
+                                Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="View product-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300">
+                    <div class="h-48 bg-indigo-100 flex items-center justify-center">
+                        <i class="fas fa-home text-indigo-500 text-7xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Pigeon Accessories</h3>
+                        <p class="text-gray-600 mb-4">Nesting materials, feeders, waterers, and other essential
+                            accessories.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-blue-600">From ₹199</span>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">Order
+                                Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class=" py-16 bg-white">
+        <div class="container bg-gray-50 mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Services</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Beyond products, we offer specialized services for pigeon
+                    enthusiasts.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <div class="flex items-start mb-4">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-pencil-ruler text-blue-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Custom Ring Design</h3>
+                            <p class="text-gray-600">Our design team will work with you to create unique, personalized
+                                pigeon rings that meet your exact specifications.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <div class="flex items-start mb-4">
+                        <div class="bg-green-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-truck text-green-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Nationwide Delivery</h3>
+                            <p class="text-gray-600">We deliver our products across India with reliable shipping
+                                partners to ensure your order arrives safely and on time.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <div class="flex items-start mb-4">
+                        <div class="bg-purple-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-headset text-purple-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Expert Advice</h3>
+                            <p class="text-gray-600">Our team of pigeon experts is available to provide guidance on
+                                product selection and general pigeon care.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <div class="flex items-start mb-4">
+                        <div class="bg-yellow-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-bullhorn text-yellow-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Bulk Orders</h3>
+                            <p class="text-gray-600">Special pricing and services available for clubs, breeders, and
+                                organizations placing large quantity orders.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class=" py-16 bg-blue-600 text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">What Our Customers Say</h2>
+                <p class="max-w-2xl mx-auto opacity-90">Hear from pigeon enthusiasts who trust Kumar Pigeon for their
+                    needs.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="View testimonial-card bg-white text-black p-8 rounded-xl">
+                    <div class="flex items-center mb-4">
+                        <div
+                            class="w-12 h-12 rounded-full text-white bg-blue-500 flex items-center justify-center mr-4">
+                            <span class="text-xl">R</span>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Rajesh Kumar</h4>
+                            <p class="text-sm opacity-80">Pigeon Breeder</p>
+                        </div>
+                    </div>
+                    <p class="opacity-90">"The custom rings from Kumar Pigeon are excellent quality. I've ordered
+                        multiple times and the colors never fade. Highly recommended!"</p>
+                </div>
+                <div class="View testimonial-card bg-white text-black p-8 rounded-xl">
+                    <div class="flex items-center mb-4">
+                        <div
+                            class="w-12 h-12 rounded-full text-white bg-blue-500 flex items-center justify-center mr-4">
+                            <span class="text-xl">P</span>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Priya Sharma</h4>
+                            <p class="text-sm opacity-80">Racing Pigeon Owner</p>
+                        </div>
+                    </div>
+                    <p class="opacity-90">"Their pigeon food has made a noticeable difference in my birds' performance.
+                        The delivery was quick and packaging was secure."</p>
+                </div>
+                <div class="View testimonial-card bg-white text-black p-8 rounded-xl">
+                    <div class="flex items-center mb-4">
+                        <div
+                            class="w-12 h-12 rounded-full text-white bg-blue-500 flex items-center justify-center mr-4">
+                            <span class="text-xl">A</span>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Amit Patel</h4>
+                            <p class="text-sm opacity-80">Pigeon Club President</p>
+                        </div>
+                    </div>
+                    <p class="opacity-90">"We ordered custom rings for our entire club. The design process was smooth
+                        and the final product exceeded our expectations."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class=" py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-12">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">About Kumar Pigeon</h2>
+                    <p class="text-gray-600 mb-4">Founded in 2010, Kumar Pigeon has grown from a small family business
+                        to one of India's leading suppliers of pigeon products. What began as a passion for pigeon
+                        keeping evolved into a mission to provide high-quality products for fellow enthusiasts.</p>
+                    <p class="text-gray-600 mb-4">Our team consists of experienced pigeon breeders, veterinarians, and
+                        product specialists who understand exactly what pigeons and their caretakers need.</p>
+                    <p class="text-gray-600">We take pride in our commitment to quality, innovation, and customer
+                        satisfaction. Every product we offer has been tested and approved by our own pigeons before
+                        reaching your birds.</p>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="bg-gray-100 rounded-xl overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1603314585442-50cf7a0c6c38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                            alt="Pigeon keeper with birds" class="w-full h-auto">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class=" py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Contact Us</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Have questions or need assistance? Reach out to our team.</p>
+            </div>
+            <div class="grid md:flex item-center justify-center">
+                <div>
+                    <div class="View bg-blue-500 text-white p-8 rounded-xl shadow-md">
+                        <h3 class="text-xl font-semibold mb-6">Contact Information</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-map-marker-alt text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium bold ">Address :</h4>
+                                    <p>123 Pigeon Lane, Ashoka Garden<br>Bhopal, (M.P) 462000 </p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-green-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-phone-alt text-green-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium bold ">Phone :</h4>
+                                    <p class="">+91 98765 43210<br>+91 98765 43211</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-purple-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-envelope text-purple-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium bold">Email :</h4>
+                                    <p class="">info@kumarpigeon.com<br>sales@kumarpigeon.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-yellow-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-clock text-yellow-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium bold">Hours :</h4>
+                                    <p class="">Monday - Saturday: 9AM - 6PM<br>Sunday: Closed</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class=" py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Frequently Asked Questions</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Find answers to common questions about our products and
+                    services.</p>
+            </div>
+            <div class="max-w-3xl mx-auto space-y-4">
+                <div class="border border-gray-200 rounded-xl overflow-hidden">
+                    <button
+                        class="faq-question w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                        <span class="font-medium text-lg">How do I place an order for custom pigeon rings?</span>
+                        <i class="fas fa-chevron-down text-blue-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden px-6 pb-6">
+                        <p class="text-gray-600">You can place an order for custom rings by contacting us through our
+                            website, email, or phone. We'll guide you through the design process, including selecting
+                            materials, colors, and the text/numbers you want on the rings. Once the design is finalized,
+                            we'll provide a quote and estimated delivery time.</p>
+                    </div>
+                </div>
+                <div class="border border-gray-200 rounded-xl overflow-hidden">
+                    <button
+                        class="faq-question w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                        <span class="font-medium text-lg">Are your wing paints safe for pigeons?</span>
+                        <i class="fas fa-chevron-down text-blue-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden px-6 pb-6">
+                        <p class="text-gray-600">Yes, all our wing paints are specially formulated to be non-toxic and
+                            safe for pigeons. They are water-based and designed not to interfere with feather quality or
+                            flight. However, we recommend using them sparingly and only when necessary for
+                            identification purposes.</p>
+                    </div>
+                </div>
+                <div class="border border-gray-200 rounded-xl overflow-hidden">
+                    <button
+                        class="faq-question w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                        <span class="font-medium text-lg">What payment methods do you accept?</span>
+                        <i class="fas fa-chevron-down text-blue-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden px-6 pb-6">
+                        <p class="text-gray-600">We accept all major payment methods including credit/debit cards, net
+                            banking, UPI payments (Google Pay, PhonePe, Paytm), and bank transfers. For bulk orders, we
+                            also accept checks and provide invoice payment options.</p>
+                    </div>
+                </div>
+                <div class="border border-gray-200 rounded-xl overflow-hidden">
+                    <button
+                        class="faq-question w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                        <span class="font-medium text-lg">Do you offer discounts for bulk orders?</span>
+                        <i class="fas fa-chevron-down text-blue-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden px-6 pb-6">
+                        <p class="text-gray-600">Yes, we offer volume discounts for bulk orders of most products. The
+                            discount percentage increases with order quantity. For clubs, breeders, and organizations
+                            placing large orders, we can also provide customized pricing. Contact our sales team for a
+                            personalized quote.</p>
+                    </div>
+                </div>
+                <div class="border border-gray-200 rounded-xl overflow-hidden">
+                    <button
+                        class="faq-question w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                        <span class="font-medium text-lg">How long does shipping typically take?</span>
+                        <i class="fas fa-chevron-down text-blue-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden px-6 pb-6">
+                        <p class="text-gray-600">Standard shipping within India typically takes 3-7 business days after
+                            processing. Custom products like personalized rings may take an additional 3-5 days for
+                            production before shipping. We also offer expedited shipping options for urgent orders.
+                            International shipping is available with delivery times varying by destination.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class=" py-16 bg-blue-600 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-6">Join Our Pigeon Community</h2>
+            <p class="max-w-2xl mx-auto mb-8 opacity-90">Subscribe to our youtube channel for product updates, pigeon
+                care
+                tips, and exclusive offers.</p>
+            <form class="max-w-md mx-auto flex flex-col sm:justify-center gap-2">
+                <button type="submit"
+                    class="bg-white hover:bg-gray-100 text-blue-600 font-bold px-6 py-3 rounded-lg transition duration-300">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-dove text-blue-500 text-3xl mr-2"></i>
+                        <span class="font-bold text-xl">Kumar Pigeon</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Your trusted source for premium pigeon products since 2020.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="#products" class="text-gray-400 hover:text-white">Products</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white">Services</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">Products</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Custom Rings</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Pigeon Food</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Wing Paints</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Medicines</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Accessories</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">Contact</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-2 text-blue-500"></i>
+                            <span>123 Ashoka Garden, Bhopal, (M.P) 462000
+                            </span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-2 text-blue-500"></i>
+                            <span>+91 98765 43210</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-blue-500"></i>
+                            <span>info@kumarpigeon.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 Kumar Pigeon. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // FAQ accordion
+        const faqQuestions = document.querySelectorAll('.faq-question');
+
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const icon = question.querySelector('i');
+
+                // Toggle answer visibility
+                answer.classList.toggle('hidden');
+
+                // Rotate icon
+                if (answer.classList.contains('hidden')) {
+                    icon.style.transform = 'rotate(0deg)';
+                } else {
+                    icon.style.transform = 'rotate(180deg)';
+                }
+
+                // Close other open answers
+                faqQuestions.forEach(q => {
+                    if (q !== question) {
+                        q.nextElementSibling.classList.add('hidden');
+                        q.querySelector('i').style.transform = 'rotate(0deg)';
+                    }
+                });
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                // Close mobile menu if open
+                mobileMenu.classList.add('hidden');
+
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const slides = document.querySelectorAll('.carousel-slide');
+            const prevBtn = document.querySelector('.carousel-prev');
+            const nextBtn = document.querySelector('.carousel-next');
+            const indicators = document.querySelectorAll('.carousel-indicator');
+
+            let currentIndex = 0;
+            let intervalId;
+            const slideInterval = 3000; // 1.5 seconds
+
+            // Initialize carousel
+            function initCarousel() {
+                updateSlidePosition();
+                startAutoSlide();
+
+                // Add event listeners
+                prevBtn.addEventListener('click', prevSlide);
+                nextBtn.addEventListener('click', nextSlide);
+
+                indicators.forEach(indicator => {
+                    indicator.addEventListener('click', () => {
+                        goToSlide(parseInt(indicator.dataset.index));
+                    });
+                });
+
+                // Pause on hover
+                const carousel = document.querySelector('.carousel-container');
+                carousel.addEventListener('mouseenter', pauseAutoSlide);
+                carousel.addEventListener('mouseleave', startAutoSlide);
+            }
+
+            // Show current slide
+            function updateSlidePosition() {
+                slides.forEach((slide, index) => {
+                    if (index === currentIndex) {
+                        slide.classList.remove('opacity-0');
+                        slide.classList.add('fade-in');
+                    } else {
+                        slide.classList.add('opacity-0');
+                        slide.classList.remove('fade-in');
+                    }
+                });
+
+                // Update indicators
+                indicators.forEach((indicator, index) => {
+                    if (index === currentIndex) {
+                        indicator.classList.add('active', 'bg-white');
+                        indicator.classList.remove('bg-white/80');
+                    } else {
+                        indicator.classList.remove('active', 'bg-white');
+                        indicator.classList.add('bg-white/80');
+                    }
+                });
+            }
+
+            // Go to specific slide
+            function goToSlide(index) {
+                currentIndex = index;
+                updateSlidePosition();
+                resetAutoSlide();
+            }
+
+            // Previous slide
+            function prevSlide() {
+                currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+                updateSlidePosition();
+                resetAutoSlide();
+            }
+
+            // Next slide
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % slides.length;
+                updateSlidePosition();
+                resetAutoSlide();
+            }
+
+            // Auto slide functions
+            function startAutoSlide() {
+                intervalId = setInterval(nextSlide, slideInterval);
+            }
+
+            function pauseAutoSlide() {
+                clearInterval(intervalId);
+            }
+
+            function resetAutoSlide() {
+                pauseAutoSlide();
+                startAutoSlide();
+            }
+
+            // Initialize
+            initCarousel();
+        });
+
+        let lastScroll = window.scrollY;
+        const menu = document.getElementById("menu");
+
+        window.addEventListener("scroll", () => {
+            const currentScroll = window.scrollY;
+            if (currentScroll > lastScroll) {
+                menu.classList.add("hide"); // scrolling down
+            } else {
+                menu.classList.remove("hide"); // scrolling up
+            }
+            lastScroll = currentScroll;
+        });
+    </script>
+</body>
+
+</html>
