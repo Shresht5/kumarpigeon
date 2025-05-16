@@ -15,7 +15,6 @@
             scroll-behavior: smooth;
         }
 
-
         .product-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
@@ -97,7 +96,7 @@
         }
 
         .View {
-            z-index: 40;
+            z-index: 1;
             animation: apear 1s linear;
             animation-timeline: view();
             animation-range: entry 0% cover 40%;
@@ -119,11 +118,11 @@
                     </div>
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="#home" class="text-blue-600 font-medium hover:text-blue-800">Home</a>
-                    <a href="#products" class="text-gray-600 hover:text-blue-600">Products</a>
-                    <a href="#services" class="text-gray-600 hover:text-blue-600">Services</a>
-                    <a href="#about" class="text-gray-600 hover:text-blue-600">About</a>
-                    <a href="#contact" class="text-gray-600 hover:text-blue-600">Contact</a>
+                    <a href="index.html" class="text-blue-600 font-medium hover:text-blue-800">Home</a>
+                    <a href="product.html" class="text-gray-600 hover:text-blue-600">Products</a>
+                    <a href="service.html" class="text-gray-600 hover:text-blue-600">Services</a>
+                    <a href="aboutus.html" class="text-gray-600 hover:text-blue-600">About</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-blue-600">Contact</a>
                 </div>
                 <div class="md:hidden">
                     <button class="mobile-menu-button p-2 focus:outline-none">
@@ -134,17 +133,21 @@
         </div>
 
         <!-- Mobile menu -->
-        <div class="mobile-menu hidden md:hidden bg-white pb-4 px-4">
-            <a href="#home" class="block py-2 text-gray-600 hover:text-blue-600">Home</a>
-            <a href="#products" class="block py-2 text-gray-600 hover:text-blue-600">Products</a>
-            <a href="#services" class="block py-2 text-gray-600 hover:text-blue-600">Services</a>
-            <a href="#about" class="block py-2 text-gray-600 hover:text-blue-600">About</a>
-            <a href="#contact" class="block py-2 text-gray-600 hover:text-blue-600">Contact</a>
+        <div class="mobile-menu hidden md:hidden bg-white z-100 pb-4 px-4">
+            <a href="index.html" class="block py-2 text-gray-600 hover:text-blue-600">Home</a>
+            <a href="product.html" class="block py-2 text-gray-600 hover:text-blue-600">Products</a>
+            <a href="service.html" class="block py-2 text-gray-600 hover:text-blue-600">Services</a>
+            <a href="aboutus.html" class="block py-2 text-gray-600 hover:text-blue-600">About</a>
+            <a href="contact.html" class="block py-2 text-gray-600 hover:text-blue-600">Contact</a>
         </div>
     </nav>
-
+    <div class="text-center mt-[90px] mb-16">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">Premium Pigeon Care Products – Custom Rings, Nutrition, and
+            More!</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">High-quality products of pigeons </p>
+    </div>
     <!-- Hero Section -->
-    <section id="home" class="hero min-h-screen flex items-end justify-center text-white">
+    <section id="home" class="hero  flex items-end justify-center z-[2] text-white">
         <div class=" w-full">
 
             <div class="carousel-container relative overflow-hidden shadow-2xl">
@@ -155,7 +158,7 @@
                         <img src="1.jpg" alt="Nature 1" class="w-full h-full object-cover">
                         <div class="absolute bottom-[10vh] left-0  text- text-yellow-800 p-6">
                             <h2 class="text-2xl font-bold">Beautiful Nature</h2>
-                            <p class="">Experience the wonders of the natural world</p>
+                            <p class="">Let your pigeons fly as far as possible</p>
                         </div>
                     </div>
 
@@ -164,8 +167,8 @@
                         class="carousel-slide absolute inset-0 w-full h-full flex items-center justify-center opacity-0">
                         <img src="2.jpg" alt="City 1" class="w-full h-full object-cover">
                         <div class="absolute bottom-[10vh] left-0  text-center text-yellow-800 p-6">
-                            <h2 class="text-2xl font-bold text-white">Urban Landscape</h2>
-                            <p class="text-gray-200">The vibrant life of modern cities</p>
+                            <h2 class="text-2xl font-bold text-white">Colorfull World</h2>
+                            <p class="text-gray-200">Each Color Give Unique Look!</p>
                         </div>
                     </div>
 
@@ -174,8 +177,8 @@
                         class="carousel-slide absolute inset-0 w-full h-full flex items-center justify-center opacity-0">
                         <img src="3.jpg" alt="Technology 1" class="w-full h-full object-cover">
                         <div class="absolute bottom-[10vh] left-0  text-center text-blue-500 p-6">
-                            <h2 class="text-2xl font-bold text-white">Modern Technology</h2>
-                            <p class="text-gray-200">Innovations shaping our future</p>
+                            <h2 class="text-2xl font-bold text-white">House Maker</h2>
+                            <p class="text-gray-200">Thousands of birds flying above you and you dont know</p>
                         </div>
                     </div>
 
@@ -184,8 +187,8 @@
                         class="carousel-slide absolute inset-0 w-full h-full flex items-center justify-center opacity-0">
                         <img src="4.jpg" alt="Food 1" class="w-full h-full object-cover">
                         <div class="absolute bottom-[10vh] left-0  text-center text-blue-500 p-6">
-                            <h2 class="text-2xl font-bold text-white">Delicious Cuisine</h2>
-                            <p class="text-gray-200">A culinary journey around the world</p>
+                            <h2 class="text-2xl font-bold text-white">Why not square Rings </h2>
+                            <p class="text-gray-200">Rings Are Id Of Birds</p>
                         </div>
                     </div>
 
@@ -194,8 +197,8 @@
                         class="carousel-slide absolute inset-0 w-full h-full flex items-center justify-center opacity-0">
                         <img src="5.jpg" alt="Animals 1" class="w-full h-full object-cover">
                         <div class="absolute bottom-[10vh] left-0  text-center text-blue-800 p-6">
-                            <h2 class="text-2xl font-bold ">Wildlife Wonders</h2>
-                            <p class="text-gray-800">Discover the beauty of Earth's creatures</p>
+                            <h2 class="text-2xl font-bold ">friendly enviroment</h2>
+                            <p class="text-gray-800">Take From Naturfe And Give Nature</p>
                         </div>
                     </div>
                 </div>
@@ -496,24 +499,42 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class=" py-16 bg-white">
+    <section id="about" class="py-20 bg-white">
         <div class="container mx-auto px-6">
             <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-12">
-                    <h2 class="text-3xl font-bold text-gray-800 mb-6">About Kumar Pigeon</h2>
-                    <p class="text-gray-600 mb-4">Founded in 2010, Kumar Pigeon has grown from a small family business
-                        to one of India's leading suppliers of pigeon products. What began as a passion for pigeon
-                        keeping evolved into a mission to provide high-quality products for fellow enthusiasts.</p>
-                    <p class="text-gray-600 mb-4">Our team consists of experienced pigeon breeders, veterinarians, and
-                        product specialists who understand exactly what pigeons and their caretakers need.</p>
-                    <p class="text-gray-600">We take pride in our commitment to quality, innovation, and customer
-                        satisfaction. Every product we offer has been tested and approved by our own pigeons before
-                        reaching your birds.</p>
+                <!-- Text Content -->
+                <div class="md:w-1/2 mb-12 md:mb-0 md:pr-12">
+                    <h2 class="text-4xl font-bold text-gray-800 mb-6">About Kumar Pigeon</h2>
+                    <p class="text-gray-700 text-lg mb-4">
+                        Kumar Pigeon, a passionate venture founded 5 years ago, is a proudly homegrown Indian business
+                        dedicated to the world of pigeons. What started as a humble dream has grown into a trusted name
+                        among breeders, fanciers, and bird lovers across the nation.
+                    </p>
+                    <p class="text-gray-700 text-lg mb-4">
+                        We specialize not just as traders of high-quality pigeon goods but also as skilled manufacturers
+                        who ensure that every product reflects love, research, and deep understanding of pigeon care.
+                    </p>
+                    <p class="text-gray-700 text-lg mb-4">
+                        Our team is made up of seasoned pigeon breeders, experienced veterinarians, and dedicated
+                        craftsmen who know the value of reliability and care. Every product—be it feed, supplements,
+                        housing accessories, or grooming tools—is tried, tested, and trusted.
+                    </p>
+                    <p class="text-gray-700 text-lg mb-4">
+                        At Kumar Pigeon, we believe in building relationships with our customers. We don't just sell
+                        products; we deliver peace of mind, feathered happiness, and a commitment to help your pigeons
+                        thrive.
+                    </p>
+                    <p class="text-gray-700 text-lg">
+                        Whether you’re a seasoned breeder or just starting out, Kumar Pigeon is here to support your
+                        journey with trusted products and genuine advice. Thank you for being part of our story—we look
+                        forward to growing together!
+                    </p>
                 </div>
+
+                <!-- Image -->
                 <div class="md:w-1/2">
-                    <div class="bg-gray-100 rounded-xl overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1603314585442-50cf7a0c6c38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-                            alt="Pigeon keeper with birds" class="w-full h-auto">
+                    <div class="bg-gray-100 rounded-xl overflow-hidden shadow-lg">
+                        <img src="a1.png" alt="Pigeon keeper with birds" class="w-full h-auto object-cover">
                     </div>
                 </div>
             </div>
@@ -547,7 +568,7 @@
                                 </div>
                                 <div>
                                     <h4 class="font-medium bold ">Phone :</h4>
-                                    <p class="">+91 98765 43210<br>+91 98765 43211</p>
+                                    <p class="">+91 98260 81051</p>
                                 </div>
                             </div>
                             <div class="flex items-start">
@@ -686,11 +707,11 @@
                 <div>
                     <h3 class="font-semibold text-lg mb-4">Quick Links</h3>
                     <ul class="space-y-2">
-                        <li><a href="#home" class="text-gray-400 hover:text-white">Home</a></li>
-                        <li><a href="#products" class="text-gray-400 hover:text-white">Products</a></li>
-                        <li><a href="#services" class="text-gray-400 hover:text-white">Services</a></li>
-                        <li><a href="#about" class="text-gray-400 hover:text-white">About Us</a></li>
-                        <li><a href="#contact" class="text-gray-400 hover:text-white">Contact</a></li>
+                        <li><a href="index.html" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="product.html" class="text-gray-400 hover:text-white">Products</a></li>
+                        <li><a href="service.html" class="text-gray-400 hover:text-white">Services</a></li>
+                        <li><a href="aboutus.html" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white">Contact</a></li>
                     </ul>
                 </div>
                 <div>
@@ -708,12 +729,12 @@
                     <ul class="space-y-2 text-gray-400">
                         <li class="flex items-start">
                             <i class="fas fa-map-marker-alt mt-1 mr-2 text-blue-500"></i>
-                            <span>123 Ashoka Garden, Bhopal, (M.P) 462000
+                            <span> Ashoka Garden, Bhopal, (M.P) 462000
                             </span>
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-phone-alt mr-2 text-blue-500"></i>
-                            <span>+91 98765 43210</span>
+                            <span>+91 98260 81051</span>
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-envelope mr-2 text-blue-500"></i>

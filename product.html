@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Pigeon Products</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        nav {
+            transition: transform 0.3s ease;
+        }
+
+        .hide {
+            transform: translateY(-100%);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+
+    <!-- Navigation -->
+    <nav id="menu" class="bg-white w-full shadow-lg fixed top-0 z-100 ">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center py-2">
+                <div class="flex items-center space-x-4">
+                    <div class="flex items-center">
+                        <img src="logo.png" display="block" alt="Description" width="40" height="40">
+                        <span style="font-family: Gabriola, cursive;"
+                            class="m-[8px] font-bold text-3xl text-blue-700">Kumar
+                            Pigeon</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-blue-600">Home</a>
+                    <a href="product.html" class="text-blue-600 font-medium hover:text-blue-800">Products</a>
+                    <a href="service.html" class="text-gray-600 hover:text-blue-600">Services</a>
+                    <a href="aboutus.html" class="text-gray-600 hover:text-blue-600">About</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-blue-600">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button class="mobile-menu-button p-2 focus:outline-none">
+                        <i data-lucide="menu" class="w-6 h-6 text-gray-600"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div class="mobile-menu hidden md:hidden bg-white z-100 pb-4 px-4">
+            <a href="index.html" class="block py-2 text-gray-600 hover:text-blue-600">Home</a>
+            <a href="product.html" class="block py-2 text-gray-600 hover:text-blue-600">Products</a>
+            <a href="service.html" class="block py-2 text-gray-600 hover:text-blue-600">Services</a>
+            <a href="aboutus.html" class="block py-2 text-gray-600 hover:text-blue-600">About</a>
+            <a href="contact.html" class="block py-2 text-gray-600 hover:text-blue-600">Contact</a>
+        </div>
+    </nav>
+
+
+    <div class="container mt-[80px] mx-auto px-4 py-8">
+        <div class="text-center mb-10">
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-2">Our Products: Good, Healthy & Pigeon-Friendly
+            </h1>
+            <div class="w-20 h-1 bg-blue-600 mx-auto mb-4"></div>
+            <p class="text-gray-600">Premium quality products designed with your pigeons' health and happiness in mind
+            </p>
+        </div>
+        <!-- Product 1: Custom Made Pigeon Rings -->
+        <div class="bg-white rounded-lg shadow-md  mb-8">
+            <div class="flex flex-col md:flex-row">
+                <!-- Product Details -->
+                <div class="w-full md:w-1/2 p-6">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-2">Custom Made Pigeon Rings</h2>
+                    <p class="text-gray-600 mb-4">Personalized identification rings crafted with premium materials for
+                        your champion racing pigeons.</p>
+
+                    <ul class="mb-6">
+                        <li class="flex items-center text-gray-600 mb-2">
+                            Durable, lightweight aluminum
+                        </li>
+                        <li class="flex items-center text-gray-600 mb-2">
+                            Custom engraving available
+                        </li>
+                        <li class="flex items-center text-gray-600 mb-2">
+                            Multiple sizes to fit all breeds
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Product Image -->
+                <div class="w-full md:w-1/2 p-6 flex items-center justify-center">
+                    <img src="p1.png" alt="Custom Pigeon Rings" class="rounded-lg shadow-md max-w-full h-auto">
+                </div>
+            </div>
+        </div>
+
+        <!-- Product 2: Premium Pigeon Feed -->
+        <div class="bg-white rounded-lg shadow-md mb-8">
+            <div class="flex flex-col md:flex-row">
+                <!-- Product Image -->
+                <div class="w-full md:w-1/2 p-6 flex items-center justify-center">
+                    <img src="p2.png" alt="Premium Pigeon Feed" class="rounded-lg shadow-md max-w-full h-auto">
+                </div>
+
+                <!-- Product Details -->
+                <div class="w-full md:w-1/2 p-6">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-2">Premium Pigeon Feed</h2>
+                    <p class="text-gray-600 mb-4">Nutrient-rich blend formulated specifically for racing pigeons to
+                        enhance performance and health.</p>
+
+                    <ul class="mb-6">
+                        <li class="flex items-center text-gray-600 mb-2">
+                            Perfect protein-carb balance for optimal performance
+                        </li>
+                        <li class="flex items-center text-gray-600 mb-2">
+                            Essential vitamins and minerals for feather quality
+                        </li>
+                        <li class="flex items-center text-gray-600 mb-2">
+                            No artificial additives or fillers - pure quality
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product 3: Pigeon Accessories -->
+        <div class="bg-white rounded-lg shadow-md mb-8">
+            <div class="flex flex-col md:flex-row">
+                <!-- Product Details -->
+                <div class="w-full md:w-1/2 p-6">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-2">Essential Pigeon Accessories</h2>
+                    <p class="text-gray-600 mb-4">High-quality accessories designed for serious pigeon racers and
+                        breeders.</p>
+
+                    <ul class="mb-6">
+                        <li class="flex items-center text-gray-600 mb-2">
+                            Durable nest bowls for breeding pairs
+                        </li>
+                        <li class="flex items-center text-gray-600 mb-2">
+                            Premium perches for comfortable roosting
+                        </li>
+                        <li class="flex items-center text-gray-600 mb-2">
+                            Specialized transport crates for safe travel
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Product Image -->
+                <div class="w-full md:w-1/2 p-6 flex items-center justify-center">
+                    <img src="p3.png" alt="Pigeon Accessories" class="rounded-lg shadow-md max-w-full h-auto">
+                </div>
+            </div>
+        </div>
+
+        <!-- Product 4: Pigeon Medicine -->
+        <div class="bg-white rounded-lg shadow-md mb-8">
+            <div class="flex flex-col md:flex-row">
+                <!-- Product Image -->
+                <div class="w-full md:w-1/2 p-6 flex items-center justify-center">
+                    <img src="p4.png" alt="Pigeon Medicine" class="rounded-lg shadow-md max-w-full h-auto">
+                </div>
+
+                <!-- Product Details -->
+                <div class="w-full md:w-1/2 p-6">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-2">Pigeon Medicine</h2>
+                    <p class="text-gray-600 mb-4">Veterinary-approved medications and supplements to keep your birds
+                        healthy and in peak condition.</p>
+
+                    <ul class="mb-6">
+                        <li class="flex items-center text-gray-600 mb-2">
+                            Preventative treatments for common ailments
+                        </li>
+                        <li class="flex items-center text-gray-600 mb-2">
+                            Recovery supplements for after racing
+                        </li>
+                        <li class="flex items-center text-gray-600 mb-2">
+                            Probiotics for optimal digestive health
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product 5: Bath Salts for Pigeons -->
+        <div class="bg-white rounded-lg shadow-md mb-8">
+            <div class="flex flex-col md:flex-row">
+                <!-- Product Details -->
+                <div class="w-full md:w-1/2 p-6">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-2">Bath Salts for Pigeons</h2>
+                    <p class="text-gray-600 mb-4">Premium bath salts that promote healthy feathers and skin while
+                        providing natural parasite protection.</p>
+
+                    <ul class="mb-6">
+                        <li class="flex items-center text-gray-600 mb-2">
+                            Natural minerals and sea salts for deep cleaning
+                        </li>
+                        <li class="flex items-center text-gray-600 mb-2">
+                            Aids in removing dust and debris from feathers
+                        </li>
+                        <li class="flex items-center text-gray-600 mb-2">
+                            Helps prevent parasites and maintains feather quality
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Product Image -->
+                <div class="w-full md:w-1/2 p-6 flex items-center justify-center">
+                    <img src="p5.png" alt="Bath Salts for Pigeons" class="rounded-lg shadow-md max-w-full h-auto">
+                </div>
+            </div>
+        </div>
+
+        <!-- Product 6: Feather Color Supplements -->
+        <div class="bg-white rounded-lg shadow-md mb-8">
+            <div class="flex flex-col md:flex-row">
+                <!-- Product Image -->
+                <div class="w-full md:w-1/2 p-6 flex items-center justify-center">
+                    <img src="p6.png" alt="Feather Color Supplements" class="rounded-lg shadow-md max-w-full h-auto">
+                </div>
+
+                <!-- Product Details -->
+                <div class="w-full md:w-1/2 p-6">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-2">Feather Color Supplements</h2>
+                    <p class="text-gray-600 mb-4">Natural supplements that enhance and intensify the natural colors of
+                        your pigeon's plumage.</p>
+
+                    <ul class="mb-6">
+                        <li class="flex items-center text-gray-600 mb-2">
+                            Contains natural carotenoids for vibrant colors
+                        </li>
+                        <li class="flex items-center text-gray-600 mb-2">
+                            Improves feather quality and shine
+                        </li>
+                        <li class="flex items-center text-gray-600 mb-2">
+                            Different formulas for various color enhancements
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-dove text-blue-500 text-3xl mr-2"></i>
+                        <span class="font-bold text-xl">Kumar Pigeon</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Your trusted source for premium pigeon products since 2020.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="product.html" class="text-gray-400 hover:text-white">Products</a></li>
+                        <li><a href="service.html" class="text-gray-400 hover:text-white">Services</a></li>
+                        <li><a href="aboutus.html" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">Products</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Custom Rings</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Pigeon Food</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Wing Paints</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Medicines</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Accessories</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">Contact</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-2 text-blue-500"></i>
+                            <span> Ashoka Garden, Bhopal, (M.P) 462000
+                            </span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-2 text-blue-500"></i>
+                            <span>+91 98260 81051</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-blue-500"></i>
+                            <span>info@kumarpigeon.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 Kumar Pigeon. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons()
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        let lastScroll = window.scrollY;
+        const menu = document.getElementById("menu");
+
+        window.addEventListener("scroll", () => {
+            const currentScroll = window.scrollY;
+            if (currentScroll > lastScroll) {
+                menu.classList.add("hide"); // scrolling down
+            } else {
+                menu.classList.remove("hide"); // scrolling up
+            }
+            lastScroll = currentScroll;
+        });
+    </script>
+</body>
+
+</html>
